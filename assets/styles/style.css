@@ -35,7 +35,7 @@ header {
   align-items: center;
   width: 100%;
   height: 60px;
-  gap: 500px;
+  gap: 400px;
   background-color: #fff;
 }
 
@@ -71,11 +71,9 @@ main {
   display: relative;
 }
 
-.container {
+/* Greeting */
+#greeting {
   width: 100%;
-}
-
-#homepage {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -85,8 +83,8 @@ main {
   margin-top: -60px;
 }
 
-.greeting {
-  width: 700px;
+#greeting .container {
+  max-width: 700px;
 }
 
 h4 {
@@ -119,19 +117,16 @@ span {
   /* border: 3px solid black; */
 }
 
+/* Portfolio */
 #portfolio {
   font-family: "Inter", sans-serif;
-  line-height: normal;
-  font-style: normal;
   font-weight: 400;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding-top: 4px;
 }
 
-.container {
+#portfolio .container {
   width: 60%;
+  margin: 0 auto;
 }
 
 h2 {
@@ -145,15 +140,14 @@ h2 {
 
 .cards {
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 50% 50%;
-  gap: 28px 24px;
-  margin: 0 auto 80px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 28px 24px;
+  margin: 0 auto;
 }
 
 .card {
   display: flex;
-  width: 100%;
+  max-width: 740px;
   flex-direction: column;
   align-items: flex-start;
   gap: 4px;
@@ -230,46 +224,42 @@ button img {
 
 /* About */
 #about {
-  display: grid;
+  width: 100%;
   height: 100vh;
-  align-items: center;
+  display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 #about .container {
-  display: grid;
-  grid-template-columns: 200px 500px;
-  grid-template-rows: 20% 65% 15%;
-  grid-template-areas:
-    "h2 . "
-    "foto p"
-    "foto resume";
-  column-gap: 30px;
+  width: 700px;
+  margin: 0 auto;
 }
 
-#about h2 {
-  grid-area: h2;
-}
-
-.paragraph {
-  grid-area: p;
-  font-size: 16px;
+#about .info {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   gap: 20px;
 }
 
-#foto-profil {
-  grid-area: foto;
-}
-
 #foto-profil img {
-  width: 200px;
+  max-width: 150px;
   border: 4px solid #00668c;
 }
 
+#about .paragraf {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#about .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 #btn-resume {
-  grid-area: resume;
   width: 120px;
   height: 40px;
   font-size: 16px;
@@ -290,19 +280,19 @@ button img {
 
 /* Contact */
 #contact {
+  height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 #contact .container {
-  display: flex;
-  flex-direction: column;
-  width: 700px;
+  width: 60%;
+  margin: 0 auto;
 }
 
-.container form {
+#contact form {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -414,6 +404,7 @@ footer a:hover {
 }
 
 @media screen and (max-width: 834px) {
+  /* Header */
   header {
     display: flex;
     justify-content: space-between;
@@ -422,30 +413,64 @@ footer a:hover {
     padding: 0 15px;
   }
 
-  .greeting {
-    width: 80%;
+  /* Greeting */
+  #greeting .container {
+    width: 60%;
   }
 
-  .container {
-    width: 80%;
+  /* Portfolio */
+  #portfolio .container {
+    width: 90%;
   }
 
-  #about {
+  .cards {
     display: flex;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    gap: 28px;
+    margin-bottom: 40px;
+  }
+
+  /* About */
+  #foto-profil img {
+    max-width: 150px;
   }
 
   #about .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about .info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    gap: 10px;
+    gap: 20px;
   }
 
+  #foto-profil img {
+    max-width: 150px;
+    border: 4px solid #00668c;
+  }
+
+  #about .paragraf {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  #about .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Contact */
   #contact .container {
     width: 90%;
   }
@@ -505,17 +530,6 @@ footer a:hover {
 }
 
 @media screen and (max-width: 640px) {
-  .cards {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    margin-bottom: 40px;
-  }
-
-  .greeting {
-    width: 80%;
-  }
-
   .arrow-bot img {
     width: 28px;
   }
