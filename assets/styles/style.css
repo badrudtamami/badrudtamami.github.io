@@ -1,16 +1,3 @@
-/* :root {
-    --primary-100:#d4eaf7;
-    --primary-200:#b6ccd8;
-    --primary-300:#3b3c3d;
-    --accent-100:#71c4ef;
-    --accent-200:#00668c;
-    --text-100:#1d1c1c;
-    --text-200:#313d44;
-    --bg-100:#fffefb;
-    --bg-200:#f5f4f1;
-    --bg-300:#cccbc8;
-} */
-
 * {
   margin: 0;
   padding: 0;
@@ -113,8 +100,7 @@ span {
 
 .arrow-bot {
   position: absolute;
-  top: 90vh;
-  /* border: 3px solid black; */
+  top: 90svh;
 }
 
 /* Portfolio */
@@ -550,5 +536,63 @@ footer a:hover {
 
   #top img {
     width: 45px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
+
+  .card ul li {
+    font-size: 12px;
+  }
+
+  .card p {
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  #btn-resume {
+    width: 110px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  #contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  form label {
+    font-size: 16px;
+  }
+
+  form input {
+    height: 36px;
+    padding: 6px;
+  }
+
+  form textarea {
+    padding: 6px;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+  }
+
+  #btn-send {
+    height: 35px;
+    background-color: #089be7;
+    border: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
   }
 }
