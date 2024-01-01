@@ -539,23 +539,23 @@ footer a:hover {
   }
 
   h2 {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .card h3 {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .card ul li {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .card p {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   p {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   #btn-resume {
@@ -571,7 +571,7 @@ footer a:hover {
   }
 
   form label {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   form input {
@@ -588,11 +588,6 @@ footer a:hover {
 
   #btn-send {
     height: 35px;
-    background-color: #089be7;
-    border: none;
-    color: white;
     font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
   }
 }
